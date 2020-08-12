@@ -6,7 +6,7 @@ pipeline {
     }
   }
   environment {
-    CREDS = credentials('amjaad_cred')
+    CREDS = credentials('amjaad_creds')
     AWS_ACCESS_KEY_ID = "${CREDS_USR}"
     AWS_SECRET_ACCESS_KEY = "${CREDS_PSW}"
     OWNER = "amjaad"
