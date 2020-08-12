@@ -12,7 +12,7 @@ pipeline {
     OWNER = "amjaad"
     PROJECT_NAME = 'web-server'
     AWS_PROFILE="kh-labs"
-    TF_NAMESPACE="amjaad"
+    TF_NAMESPACE="bryan"
   }
   stages {
       stage("init") {
@@ -24,9 +24,9 @@ pipeline {
           steps {
               sh """
 terraform workspace select jenkins-lab-2
-if [[ \$? -ne 0 ]]; then
+#if [[ \$? -ne 0 ]]; then
   terraform workspace new jenkins-lab-2
-fi
+#fi
 """
           }
       }
